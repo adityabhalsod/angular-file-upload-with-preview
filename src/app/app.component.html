@@ -1,0 +1,32 @@
+<!-- Button -->
+<div class="card">
+    <div class="d-flex p-2 col-lg-2 align-self-center">
+        <button type="button" class="btn btn-primary" (click)="drop.showFileSelector()">Browse</button> 
+        &nbsp;  
+        <button type="button" class="btn btn-danger" (click)="onRemoved()">Cancel</button>
+    </div>
+</div>
+
+
+<!-- drop place -->
+<ngx-dropzone class="custom-dropzone size"  [expandable]="true" (change)="onSelect($event)" [multiple]="false" #drop>
+    <ngx-dropzone-label [hidden]="isLabelHideen">Please drop image or video!</ngx-dropzone-label>
+    <ngx-dropzone-preview *ngFor="let file of allFiles" [removable]="true">
+        <ngx-dropzone-label>{{ file.name }} ({{ file.type }})</ngx-dropzone-label>
+    </ngx-dropzone-preview>
+
+    <!-- for image preview -->
+    <img *ngIf="imageUrl" [src]="imageUrl" class="size">
+
+    <!-- for video preview -->
+    <video *ngIf="videoUrl" class="size" autoplay controls>
+        <source [src]="videoUrl">
+    </video>
+
+    <!-- for audio preview -->
+    <audio *ngIf="audioUrl" autoplay controls>
+            <source [src]="audioUrl" type="audio/mpeg">  
+    </audio>
+</ngx-dropzone>
+
+

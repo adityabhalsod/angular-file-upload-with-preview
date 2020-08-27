@@ -1,0 +1,11 @@
+Document for more reference angular comment 
+
+https://www.npmjs.com/package/ngx-dropzone
+
+
+Please goto main directory and open terminal/cmd:
+
+1. npm install   or  npm i ngx-dropzone
+
+
+For button design use boostrap4
