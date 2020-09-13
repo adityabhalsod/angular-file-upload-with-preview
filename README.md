@@ -1,4 +1,4 @@
-# Clone repo [github](https://github.com/AdityaBhalsod7/angular-file-upload-wth-preview.git)
+# Clone repo [github](https://github.com/AdityaBhalsod7/angular-file-upload-with-preview.git)
 
 # angular-file-upload-with-preview
 
